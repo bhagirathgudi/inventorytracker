@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.microsoft.azure:azure-spring-boot:2.0.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.microsoft.azure/azure-spring-boot/2.0.4/6aa95fb4e4ace5ad391fd5d784866f74a677df17/azure-spring-boot-2.0.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.microsoft.azure/azure-spring-boot/2.0.4/9d6b2a95136ba1801a123691ab711ed578bd30d2/azure-spring-boot-2.0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
