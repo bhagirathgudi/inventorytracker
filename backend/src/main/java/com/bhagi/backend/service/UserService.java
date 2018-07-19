@@ -1,4 +1,9 @@
 package com.bhagi.backend.service;
 
-public class UserService {
+import com.bhagi.backend.model.User;
+
+public interface UserService {
+
+    public void save(User user);
+    public User findByUsername(String username);
 }
