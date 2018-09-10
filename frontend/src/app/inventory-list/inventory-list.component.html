@@ -1,0 +1,41 @@
+<div class='card'>
+  <div class='card-header'>
+    {{pageTitle}}
+  </div>
+  <div class='card-body'>
+    <div class='row'>
+      <div class='col-md-2'>Filter by Category:</div>
+      <div class='col-md-4'>
+        <input type='text' 
+            [(ngModel)]="inventoryFilterByCategory"/>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-6'>
+        <h4>Filtered by Category: {{inventoryFilterByCategory}}</h4>
+      </div>
+    </div>
+  </div>
+  <div class='table-responsive'>
+    <table class='table' *ngIf='inventoryList && inventoryList.length'>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Stock</th>
+          <th>Price</th>
+          <th>Expiry</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let inventory of inventoryList'>
+          <td>{{inventory.name}}</td>
+          <td>{{inventory.category}}</td>
+          <td>{{inventory.stock}}</td>
+          <td>{{inventory.price | currency:'EUR':'1.2-2'}}</td>
+          <td>{{inventory.expiry}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
