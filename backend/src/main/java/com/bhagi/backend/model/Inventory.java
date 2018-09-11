@@ -18,10 +18,13 @@ public class Inventory {
     private Long id;
     private String inventoryName;
     private String companyName;
+    private String createdBy;
     private Long stock;
+    private Double price;
+    private String category;
+    private String currency;
     private Date expiryDate;
     private Date createdDate;
-    private String createdBy;
     private String lastUpdateBy;
     private Date lastUpdatedDate;
 }

@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -14,5 +15,8 @@ public class InventoryRequest {
     private String companyName;
     private String createdBy;
     private Long stock;
+    private Double price;
+    private String category;
+    private String currency;
     private Date expiryDate;
 }

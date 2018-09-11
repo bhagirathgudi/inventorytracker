@@ -21,6 +21,9 @@ public class InventoryService {
         inventory.setExpiryDate(inventoryRequest.getExpiryDate());
         inventory.setInventoryName(inventoryRequest.getInventoryName());
         inventory.setStock(inventoryRequest.getStock());
+        inventory.setCategory(inventoryRequest.getCategory());
+        inventory.setCurrency(inventoryRequest.getCurrency());
+        inventory.setPrice(inventoryRequest.getPrice());
         inventory.setCreatedBy(inventoryRequest.getCreatedBy());
         inventory.setCreatedDate(new Date());
         inventoryRepository.save(inventory);

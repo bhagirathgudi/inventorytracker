@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Inventory } from '../inventory/inventory';
+import { InventoryService } from '../inventory.service';
 
 @Component({
   selector: 'app-inventory-list',
@@ -6,91 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inventory-list.component.css']
 })
 export class InventoryListComponent {
-
+  constructor(private inventoryService : InventoryService) {
+  }
   pageTitle: string = 'Inventory List';
   inventoryFilterByCategory: string = 'soap';
-  
-  inventoryList: any[] = [
-    {
-      "name" :"Dove soap",
-      "stock":100,
-      "category":"soap",
-      "price": 1.00,
-      "currency" :"USD",
-      "expiry": "01-21-2019"
-    },
-    {
-      "name" :"Manchao Soup",
-      "stock":100,
-      "category":"soup",
-      "price": 1.00,
-      "currency" :"USD",
-      "expiry": "01-21-2019"
-    },
-    {
-      "name" :"Manchao Soup",
-      "stock":100,
-      "category":"soup",
-      "price": 1.00,
-      "currency" :"USD",
-      "expiry": "01-21-2019"
-    },
-    {
-      "name" :"Manchao Soup",
-      "stock":100,
-      "category":"soup",
-      "price": 1.00,
-      "currency" :"USD",
-      "expiry": "01-21-2019"
-    },
-    {
-      "name" :"Manchao Soup",
-      "stock":100,
-      "category":"soup",
-      "price": 1.00,
-      "currency" :"USD",
-      "expiry": "01-21-2019"
-    },
-    {
-      "name" :"Manchao Soup",
-      "stock":100,
-      "category":"soup",
-      "price": 1.00,
-      "currency" :"USD",
-      "expiry": "01-21-2019"
-    },
-    {
-      "name" :"Manchao Soup",
-      "stock":100,
-      "category":"soup",
-      "price": 1.00,
-      "currency" :"USD",
-      "expiry": "01-21-2019"
-    },
-    {
-      "name" :"Manchao Soup",
-      "stock":100,
-      "category":"soup",
-      "price": 1.00,
-      "currency" :"USD",
-      "expiry": "01-21-2019"
-    },
-    {
-      "name" :"Manchao Soup",
-      "stock":100,
-      "category":"soup",
-      "price": 1.00,
-      "currency" :"USD",
-      "expiry": "01-21-2019"
-    },
-    {
-      "name" :"Manchao Soup",
-      "stock":100,
-      "category":"soup",
-      "price": 1.00,
-      "currency" :"USD",
-      "expiry": "01-21-2019"
-    }
-  ];
 
+  inventoryList: Inventory[];
+  ngOnInit(): void {
+    this.inventoryService.getInventory().subscribe(
+        p => this.inventoryList = p
+    );
+  }
 }
